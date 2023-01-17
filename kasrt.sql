@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 16 Jan 2023 pada 19.50
+-- Generation Time: 16 Jan 2023 pada 20.54
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -35,13 +35,6 @@ CREATE TABLE `iuran` (
   `jenis_iuran` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data untuk tabel `iuran`
---
-
-INSERT INTO `iuran` (`id`, `tanggal`, `warga_id`, `nominal`, `keterangan`, `jenis_iuran`) VALUES
-(1, '2023-01-17', 2, '250000.00', 'sumbangan', 'Sumbangan');
-
 -- --------------------------------------------------------
 
 --
@@ -63,9 +56,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `nama`, `email`, `status`, `role`) VALUES
-(1, 'ariffern', '123', 'Arif Fernanda', 'arif@gmail.com', 'Aktif', 'Admin'),
-(2, 'Arfzhul', '123123', 'Arifan Zhulfi', 'zhull@gmail.com', 'Aktif', 'User'),
-(3, 'suhend', '123', 'Dadang Suhendra', 'suhendra@gmail.com', 'Aktif', 'User');
+(1, 'ariffen', '123', 'Arif Fernanda', 'arif@gmail.com', '123', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -90,9 +81,7 @@ CREATE TABLE `warga` (
 --
 
 INSERT INTO `warga` (`id`, `nik`, `nama`, `jenis_kelamin`, `no_hp`, `alamat`, `no_rumah`, `status`, `users_id`) VALUES
-(1, '3212233038288127', 'Arif Fernanda', 'Laki-Laki', '081319020163', 'Cikarang, Kab.bekasi', '0128', 'Aktif ', 1),
-(2, '321564654654654', 'Arifan Zhulfi', 'Perempuan', '088887675654', 'Cikarang, Kab. Bekasi', '087', 'Aktif ', 2),
-(3, '32177362182727', 'Dadang Suhendra', 'Laki-Laki', '0887626261727', 'Cikarang, Kab. bekasi', '237', 'Aktif ', 3);
+(1, '3212312371237', 'Arif Fernanda', 'Laki-Laki', '081232372', 'Cikarang, kab. bekasi', '282', 'Aktif', 1);
 
 --
 -- Indexes for dumped tables
@@ -129,17 +118,17 @@ ALTER TABLE `warga`
 -- AUTO_INCREMENT for table `iuran`
 --
 ALTER TABLE `iuran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `warga`
 --
 ALTER TABLE `warga`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
